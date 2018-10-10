@@ -18,20 +18,20 @@ public class Program {
     System.out.print("how many tickets?");
     tickets = reader.nextInt();
     for (int i = 0; i < tickets; i++) {
-      boolean seated = false;
       System.out.print("row number?");
-      int row = reader.nextInt();
+      int row = reader.nextInt() - 1;
       System.out.print("col number?");
-      int col = reader.nextInt();
-      while (!seated) {
-        if (!cinema[row][col].isTaken()) {
-          cinema[row][col].setTaken(true);
-          seated = true;
-        } else {
-          System.out.print("seat taken, choose again");
-        }
-      }
+      int col = reader.nextInt() - 1;
+      while (cinema[row][col].isTaken()) {
+        System.out.print("seat taken, choose again");
+        System.out.print("row number?");
+        row = reader.nextInt() - 1;
+        System.out.print("col number?");
+        col = reader.nextInt() - 1;
 
+      }
+      cinema[row][col].setTaken(true);
+      System.out.print("seat reservred for you, price: " + cinema[row][col].getPrice());
     }
   }
 
