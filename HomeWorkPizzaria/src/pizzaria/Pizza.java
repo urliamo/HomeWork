@@ -46,7 +46,7 @@ public class Pizza {
 	public void print() {
 		System.out.println("Pizza diameter is: "+this.getDiameter());
 		System.out.println("Pizza has "+this.getSlices()+" slices");
-		System.out.println("Pizza has "+this.getDiameter()+" toppings");
+		System.out.println("Pizza has "+this.getToppings()+" toppings");
 	}
 	public double getDiameter() {
 		return diameter;
