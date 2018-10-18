@@ -17,6 +17,6 @@ public abstract class Person {
 		/*--------------Methods-------------------*/
 
 		public void Print() {
-			System.out.println("Name: "+this.Name+" Surname: "+this.Surname);
+			System.out.print("Name: "+this.Name+" Surname: "+this.Surname+" ");
 		}
 }

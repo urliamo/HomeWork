@@ -2,11 +2,10 @@ package airPort;
 
 import java.util.Scanner;
 
-public class Steward extends Person {
+public class Steward extends Crew {
 	
 		/*--------------Properties-------------------*/
 
-		private int Tenure;
 		private String Origin;
 		private String flightClass;
 		Scanner reader = new Scanner(System.in);
@@ -22,7 +21,7 @@ public class Steward extends Person {
 			
 			System.out.println("Tenure:");
 
-			this.Tenure=reader.nextInt();
+			this.setTenure(reader.nextInt());
 			System.out.println("Origin:");
 
 			this.Origin=reader.next();
@@ -35,7 +34,7 @@ public class Steward extends Person {
 
 		public void Print() {
 			super.Print();
-			System.out.println("Tenure: "+Tenure+" Origin: "+Origin+" Class: "+flightClass);
+			System.out.println("Origin: "+Origin+" Class: "+flightClass);
 		}
 
 }

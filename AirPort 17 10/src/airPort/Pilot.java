@@ -1,11 +1,10 @@
 package airPort;
 import java.util.Scanner;
 
-public class Pilot extends Person {
+public class Pilot extends Crew {
 		/*--------------Properties-------------------*/
 
 		private int Lisence;
-		private int Tenure;
 		Scanner reader = new Scanner(System.in);
 		
 		/*--------------Constructors-------------------*/
@@ -23,14 +22,13 @@ public class Pilot extends Person {
 			this.Lisence=reader.nextInt();
 			System.out.println("Tenure:");
 
-			this.Tenure=reader.nextInt();
-		}
+			this.setTenure(reader.nextInt());		}
 		
 		/*--------------Methods-------------------*/
 
 		public void Print() {
 			super.Print();
-			System.out.println("Lisence no.: "+this.Lisence+" Tenure: "+this.Tenure);
+			System.out.println("Lisence no.: "+this.Lisence);
 			
 			
 			
